@@ -52,6 +52,7 @@ public class Device {
      * Collection of known Recovery Partitions on some devices
      */
     private final File[] RecoveryList = {
+            new File("/dev/block/platform/hi_mci.0/by-name/recovery"),
             new File("/dev/block/platform/omap/omap_hsmmc.0/by-name/recovery"),
             new File("/dev/block/platform/omap/omap_hsmmc.1/by-name/recovery"),
             new File("/dev/block/platform/sdhci-tegra.3/by-name/recovery"),
@@ -83,6 +84,7 @@ public class Device {
      * Collection of known Kernel Partitions on some devices
      */
     private final File[] KernelList = {
+            new File("/dev/block/platform/hi_mci.0/by-name/boot"),
             new File("/dev/block/platform/omap/omap_hsmmc.0/by-name/boot"),
             new File("/dev/block/platform/sprd-sdhci.3/by-name/KERNEL"),
             new File("/dev/block/platform/sdhci-tegra.3/by-name/LNX"),
@@ -324,9 +326,9 @@ public class Device {
 //      Huawei U9508
         if (mBoard.equals("u9508") || mName.equals("hwu9508")) mName = "u9508";
 
-//      Huawei Ascend P1
-        if (mName.equals("hwu9200") || mBoard.equals("u9200") || MODEL.equals("u9200"))
-            mName = "u9200";
+//      Huawei Ascend Mate 7
+        if (mName.equals("hwmt7") || mBoard.equals("MT7-L09") || MODEL.equals("MT7-L09"))
+            mName = "hwmt7";
 
 //      Motorola RAZR
         if (mName.equals("cdma_yangtze") || mBoard.equals("yangtze")) mName = "yangtze";
